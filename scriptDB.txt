@@ -9,17 +9,17 @@ SET time_zone = "+00:00";
 -- Table structure for table `regiones`
 --
 
-CREATE TABLE `region` (
-  `id` bigint(20) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `codigo` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--CREATE TABLE `region` (
+--  `id` bigint(20) NOT NULL,
+--  `nombre` varchar(255) NOT NULL,
+--  `codigo` int(20) NOT NULL
+--) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `departamentos`
 --
 
-INSERT INTO `departamentos` (`id`, `nombre`, `codigo`) VALUES
+INSERT INTO nicocine.region (`id`, `nombre`, `codigo`) VALUES
 (1, 'Antioquia', 5),
 (2, 'Atlantico', 8),
 (3, 'D. C. Santa Fe de Bogotá', 11),
@@ -110,18 +110,18 @@ SET time_zone = "+00:00";
 -- Table structure for table `municipios`
 --
 
-CREATE TABLE `ciudad` (
-  `id` bigint(20) NOT NULL,
-  `region_id` bigint(20) NOT NULL,
-  `codigo` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- CREATE TABLE nicocine.ciudad (
+--  `id` bigint(20) NOT NULL,
+--  `region_id` bigint(20) NOT NULL,
+--  `codigo` int(11) NOT NULL,
+--  `nombre` varchar(255) NOT NULL
+--) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `municipios`
 --
 
-INSERT INTO `municipios` (`id`, `departamento_id`, `codigo`, `nombre`) VALUES
+INSERT INTO nicocine.ciudad (`id`, `region_id`, `codigo`, `nombre`) VALUES
 (1, 1, 1, 'MEDELLIN'),
 (2, 1, 2, 'ABEJORRAL'),
 (3, 1, 4, 'ABRIAQUI'),

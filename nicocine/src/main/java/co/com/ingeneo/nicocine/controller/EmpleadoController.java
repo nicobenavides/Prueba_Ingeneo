@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Empleado")
+@RequestMapping("/empleado")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class EmpleadoController {
 
@@ -31,7 +31,7 @@ public class EmpleadoController {
 	public ResponseEntity<?> crear(@RequestBody Empleado Empleado) {
 		try {
 			EmpleadoService.guardar(Empleado);
-			return new ResponseEntity<MensajeDto>(new MensajeDto("producto guardado"), HttpStatus.CREATED);
+			return new ResponseEntity<MensajeDto>(new MensajeDto("empleado guardado"), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -42,7 +42,7 @@ public class EmpleadoController {
 
 		try {
 			EmpleadoService.actualizar(Empleado);
-			return new ResponseEntity<MensajeDto>(new MensajeDto("producto actualizado"), HttpStatus.CREATED);
+			return new ResponseEntity<MensajeDto>(new MensajeDto("empleado actualizado"), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}

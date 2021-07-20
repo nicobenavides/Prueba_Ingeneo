@@ -27,13 +27,7 @@ class NicocineApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-	@Test
-	void createSucursal() {
-		Sucursal s1 = new Sucursal();
-		s1.setNombre("sucursal de prueba.");
-		s1.setCiudad( new Ciudad("Pereira", new Region("Risaralda","Colombia")) );
-		sucursalService.guardar(s1);
-	}
+	
 
 	@Test
 	void createEmpleado() {

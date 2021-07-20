@@ -19,12 +19,12 @@ public class Region {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
-	private int id;
+	private Long id;
 	
 	@Column(name = "nombre")
 	private String nombre;
 	
 	@Column(name = "codigo")
-	private Long pais;
+	private int pais;
 
 }

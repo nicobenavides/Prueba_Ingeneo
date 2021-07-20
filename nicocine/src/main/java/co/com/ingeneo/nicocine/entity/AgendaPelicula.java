@@ -37,6 +37,5 @@ public class AgendaPelicula {
     @OneToOne(fetch = FetchType.LAZY)
 	private Sala sala;
     
-    /*@OneToMany(mappedBy = "agenda_pelicula", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<FechaPresentPelicula> filas;*/
+	
 }
