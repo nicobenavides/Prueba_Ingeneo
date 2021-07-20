@@ -11,9 +11,6 @@ import co.com.ingeneo.nicocine.repository.ISucursalRepository;
 @Service
 public class SucursalService {
 
-	
-
-	
 	@Autowired
 	ISucursalRepository iSucursalRepository;
 
@@ -24,7 +21,6 @@ public class SucursalService {
 
 	public void guardar(Sucursal sucursal) {
 		iSucursalRepository.save(sucursal);
-		
 	}
 
 	public void actualizar(List<Sucursal> sucursal) {
@@ -32,7 +28,6 @@ public class SucursalService {
 			Sucursal s2 = iSucursalRepository.getById(s.getId());
 			iSucursalRepository.save(s2);
 		}
-		
 	}
 
 }
