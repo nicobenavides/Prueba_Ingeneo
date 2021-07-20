@@ -15,34 +15,30 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="SALA")
+@Entity(name="AGENDA_PELICULA")
 @Table
-public class Sala {
-	
+public class AgendaPelicula {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
-	private Long id;
-	@Column(name = "nombre")
-	private String nombre;
+	private Long id;	
 	
-	@JoinColumn(name = "formato_id")
+    @JoinColumn(name = "empleado_id")
     @OneToOne(fetch = FetchType.LAZY)
-	private Formato formato;
+	private Empleado administrador;
+    
+    @JoinColumn(name = "sala_id")
+    @OneToOne(fetch = FetchType.LAZY)
+	private Sala sala;
+    
+    @OneToMany(mappedBy = "agenda_pelicula", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<FechaPresentPelicula> filas;
+    
 	
-	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Fila> filas;
-	
-	
-
 }

@@ -1,40 +1,37 @@
 package co.com.ingeneo.nicocine.entity;
 
+import java.sql.Date;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Fila")
+@Entity(name="FECHA_PRESENT_PELICULA")
 @Table
-public class Fila {
+public class FechaPresentPelicula {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
-	private Long id;
-	
-	@Column(name = "nombre")
-	private char nombre;
-	
-	@ManyToOne()
-    @JoinColumn(name = "sala_id")
-	private Sala sala;
-	
-	@Column(name = "sillas")
-	private Long sillas;
+	private Long id;	   
+    
+    @JoinColumn(name = "agenda_pelicula_id")
+    @OneToOne(fetch = FetchType.LAZY)
+	private AgendaPelicula agendaPelicula;
+    
+    @Column(name = "fecha_presentacion_pel")
+	private Date  fechaPresentacionPel;
 }

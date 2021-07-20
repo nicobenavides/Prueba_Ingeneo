@@ -25,8 +25,10 @@ public class Formato {
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
 	private Long id;
+	
 	@Column(name = "name")
 	private String name;
+	
 	@Column(name = "descripcion")
 	private String descripcion;
 

@@ -31,14 +31,17 @@ public class Empleado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
 	private Long id;
+	
 	@Column(name = "nombre")
 	private String nombre;
+	
 	@Column(name = "apellido")
 	private String apellido;
 	
 	@ManyToOne()
     @JoinColumn(name = "rol_id")
 	private Rol rol;
+	
 	@Column(name = "documento")
 	private String documento;
 

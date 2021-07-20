@@ -25,14 +25,17 @@ public class Sucursal {
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
 	private Long id;
+	
 	@Column(name = "nombre")
 	private String nombre;
-	// Que columna en la tabla Tuition tiene la FK
+	
     @JoinColumn(name = "empleado_id")
     @OneToOne(fetch = FetchType.LAZY)
 	private Empleado administrador;
+    
 	@Column(name = "ciudad_id")
 	private Long ciudad;
+	
 	@Column(name = "direccion")
 	private String direccion;
 
