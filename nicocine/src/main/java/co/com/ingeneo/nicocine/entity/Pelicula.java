@@ -1,4 +1,4 @@
-package co.com.ingeneo.entity;
+package co.com.ingeneo.nicocine.entity;
 
 import java.sql.Date;
 
