@@ -8,25 +8,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@Builder
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@Entity(name = "ROL")
+@Entity(name="REGION")
 @Table
-public class Rol {
+public class Region {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
-	private Long id;
+	private int id;
 	
-	@Column(name = "tipo")
-	private String tipo;
+	@Column(name = "nombre")
+	private String nombre;
+	
+	@Column(name = "codigo")
+	private Long pais;
 
 }

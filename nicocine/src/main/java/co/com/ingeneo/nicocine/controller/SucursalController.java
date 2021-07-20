@@ -41,7 +41,7 @@ public class SucursalController {
 	public ResponseEntity<?> crear(@RequestBody Sucursal sucursal) {
 		try {
 			sucursalService.guardar(sucursal);
-			return new ResponseEntity<MensajeDto>(new MensajeDto("producto guardado"), HttpStatus.CREATED);
+			return new ResponseEntity<MensajeDto>(new MensajeDto("sucursal guardada"), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -52,7 +52,7 @@ public class SucursalController {
 
 		try {
 			sucursalService.actualizar(sucursal);
-			return new ResponseEntity<MensajeDto>(new MensajeDto("producto actualizado"), HttpStatus.CREATED);
+			return new ResponseEntity<MensajeDto>(new MensajeDto("sucursal actualizada"), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}

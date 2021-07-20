@@ -1,6 +1,8 @@
 package co.com.ingeneo.nicocine;
 
+import co.com.ingeneo.nicocine.entity.Ciudad;
 import co.com.ingeneo.nicocine.entity.Empleado;
+import co.com.ingeneo.nicocine.entity.Region;
 import co.com.ingeneo.nicocine.entity.Sucursal;
 import co.com.ingeneo.nicocine.service.EmpleadoService;
 import co.com.ingeneo.nicocine.service.SucursalService;
@@ -29,7 +31,7 @@ class NicocineApplicationTests {
 	void createSucursal() {
 		Sucursal s1 = new Sucursal();
 		s1.setNombre("sucursal de prueba.");
-		s1.setCiudad( new Long(1) );
+		s1.setCiudad( new Ciudad("Pereira", new Region("Risaralda","Colombia")) );
 		sucursalService.guardar(s1);
 	}
 
