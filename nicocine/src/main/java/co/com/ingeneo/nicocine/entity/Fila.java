@@ -25,12 +25,12 @@ import lombok.Setter;
 public class Fila {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
-	@Column(name = "id_fila")
+	@Column(name = "id")
 	private Long id;
 	@Column(name = "nombre")
 	private char nombre;
 	@ManyToOne()
-    @JoinColumn(name = "id_sala")
+    @JoinColumn(name = "sala_id")
 	private Sala sala;
 	@Column(name = "sillas")
 	private Long sillas;

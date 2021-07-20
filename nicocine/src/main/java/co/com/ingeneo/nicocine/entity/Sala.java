@@ -31,12 +31,12 @@ public class Sala {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
-	@Column(name = "id_sala")
+	@Column(name = "id")
 	private Long id;
 	@Column(name = "nombre")
 	private String nombre;
 	
-	@JoinColumn(name = "id_formato")
+	@JoinColumn(name = "formato_id")
     @OneToOne(fetch = FetchType.LAZY)
 	private Formato formato;
 	

@@ -29,7 +29,7 @@ public class Empleado {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
-	@Column(name = "id_empleado")
+	@Column(name = "id")
 	private Long id;
 	@Column(name = "nombre")
 	private String nombre;
@@ -37,7 +37,7 @@ public class Empleado {
 	private String apellido;
 	
 	@ManyToOne()
-    @JoinColumn(name = "id_rol")
+    @JoinColumn(name = "rol_id")
 	private Rol rol;
 	@Column(name = "documento")
 	private String documento;

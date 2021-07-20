@@ -23,7 +23,7 @@ import lombok.Setter;
 public class Formato {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
-	@Column(name = "id_formato")
+	@Column(name = "id")
 	private Long id;
 	@Column(name = "name")
 	private String name;

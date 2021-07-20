@@ -23,7 +23,7 @@ import lombok.Setter;
 public class Rol {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
-	@Column (name = "id_rol")
+	@Column (name = "id")
 	private Long id;
 	@Column(name = "tipo")
 	private String tipo;
