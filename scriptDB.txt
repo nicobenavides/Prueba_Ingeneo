@@ -1,23 +1,5 @@
 
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-
---
--- Table structure for table `regiones`
---
-
---CREATE TABLE `region` (
---  `id` bigint(20) NOT NULL,
---  `nombre` varchar(255) NOT NULL,
---  `codigo` int(20) NOT NULL
---) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `departamentos`
---
 
 INSERT INTO nicocine.region (`id`, `nombre`, `codigo`) VALUES
 (1, 'Antioquia', 5),
@@ -55,29 +37,6 @@ INSERT INTO nicocine.region (`id`, `nombre`, `codigo`) VALUES
 (33, 'Vichada', 99);
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `departamentos`
---
-ALTER TABLE `departamentos`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `departamentos`
---
-ALTER TABLE `departamentos`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
 
 
 
@@ -1249,36 +1208,9 @@ INSERT INTO nicocine.ciudad (`id`, `region_id`, `codigo`, `nombre`) VALUES
 (1125, 33, 760, 'SAN JOSE DE OCUNE'),
 (1126, 33, 773, 'CUMARIBO');
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `municipios`
---
-ALTER TABLE `municipios`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `departamento_id` (`departamento_id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
+--Script para insertar usuarios
 
---
--- AUTO_INCREMENT for table `municipios`
---
-ALTER TABLE `municipios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1127;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `municipios`
---
-ALTER TABLE `municipios`
-  ADD CONSTRAINT `municipios_ibfk_1` FOREIGN KEY (`departamento_id`) REFERENCES `departamentos` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `nicocine`.`usuario` (`nombre`, `password`) VALUES ('usuario1', '123456');
+INSERT INTO `nicocine`.`usuario` (`nombre`, `password`) VALUES ('usuario2', '123456');
