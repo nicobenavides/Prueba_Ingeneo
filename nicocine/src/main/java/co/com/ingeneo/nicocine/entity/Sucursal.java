@@ -31,7 +31,7 @@ public class Sucursal {
 	private String nombre;
 	
     @JoinColumn(name = "empleado_id")
-    @OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne()
 	private Empleado administrador;
     
     @ManyToOne()
