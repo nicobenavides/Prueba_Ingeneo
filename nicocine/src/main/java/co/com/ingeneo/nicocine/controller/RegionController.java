@@ -19,7 +19,7 @@ import co.com.ingeneo.nicocine.service.RegionService;
 
 
 @RestController
-@RequestMapping("/ciudad")
+@RequestMapping("/region")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class RegionController {
 	
