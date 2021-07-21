@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ingeneo.nicocine.dto.MensajeDto;
 import co.com.ingeneo.nicocine.entity.Sala;
-import co.com.ingeneo.nicocine.entity.Sucursal;
 import co.com.ingeneo.nicocine.service.SalaService;
-import co.com.ingeneo.nicocine.service.SucursalService;
 
 
 @RestController

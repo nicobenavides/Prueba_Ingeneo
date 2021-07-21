@@ -33,6 +33,7 @@ public class Sala {
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
 	@Column(name = "id")
 	private Long id;
+	
 	@Column(name = "nombre")
 	private String nombre;
 	
@@ -40,8 +41,8 @@ public class Sala {
     @OneToOne(fetch = FetchType.LAZY)
 	private Formato formato;
 	
-	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Fila> filas;
+	/*@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Fila> filas;*/
 	
 	
 	
