@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -38,11 +39,13 @@ public class Sala {
 	private String nombre;
 	
 	@JoinColumn(name = "formato_id")
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
 	private Formato formato;
 	
-	/*@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Fila> filas;*/
+	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Fila> filas;
+	
+	
 	
 	
 	
