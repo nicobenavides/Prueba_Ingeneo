@@ -40,6 +40,10 @@ public class Sala {
     @ManyToOne()
 	private Formato formato;
 	
+	@JoinColumn(name = "sucursal_id")
+    @ManyToOne()
+	private Sucursal sucursal;
+	
 	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Fila> filas;
 	
